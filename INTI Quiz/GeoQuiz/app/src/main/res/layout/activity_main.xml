@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white"
+>
+
+    <TextView
+        android:id="@+id/scorelabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_score_label"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"/>
+
+    <!-- score label-->
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="429dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Question label-->
+        <TextView
+            android:id="@+id/question_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:textColor="@color/inticolor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <!-- false button -->
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/inticolor"
+            android:text="@string/false_button"
+            android:textColor="@color/white" />
+
+        <!-- True button -->
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:text="@string/true_button"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Cheat button-->
+        <Button
+            android:id="@+id/cheat_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/cheat_button"
+            android:textColor="@color/white"
+            android:background="@color/bloodred"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

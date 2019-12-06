@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">IICP Quiz</string>
+
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+    <string name="next_button">Next</string>
+    <string name="correct_toast">Well done!</string>
+    <string name="incorrect_toast">Try again!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="question_1">The Library is located at Level 2.</string>
+    <string name="question_2">The ping pong table is located at Level 5.</string>
+    <string name="question_3">The library has computers for printing</string>
+    <string name="question_4">The dungeon carpark can be accessed through the path next to the exit of Level 1 carpark.</string>
+    <string name="question_5">The empty space outside dungeon is called secret garden.</string>
+    <string name="question_6">IICP does not have double parking.</string>
+    <string name="question_7">The snooker table is located at 6th floor.</string>
+    <string name="question_8">ISST helps IICP to promote the college.</string>
+    <string name="question_9">INTIMA is the student government of IICP.</string>
+    <string name="question_10">Design Simulation Lab(DESIM Lab) is located at Level 4</string>
+    <string name="warning_text">Are you sure you want to do this?</string>
+    <string name="show_answer_button">I AM SURE</string>
+    <string name="back_button">Back</string>
+    <string name="cheat_button">Cheat!</string>
+    <string name="previous_button">Previous</string>
+    <string name="judgment_toast">Cheating is wrong.</string>
+    <string name="name">Your name:</string>
+    <string name="input_name">Enter your name here</string>
+    <string name="score_label">Your score is:</string>
+    <string name="welcome">Welcome to IICP Common Knowledge Quiz</string>
+    <string name="main_score_label">Your score is:</string>
+</resources>

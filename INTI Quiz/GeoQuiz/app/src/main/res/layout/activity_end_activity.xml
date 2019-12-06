@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="4"
+
+        >
+        <!-- results label  -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Results:"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+
+            />
+
+        <!-- username label -->
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="User"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:weightSum="4">
+
+            <!-- "your score" label -->
+            <TextView
+                android:id="@+id/final_result_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/score_label"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+
+                />
+            <!-- final score label -->
+            <TextView
+                android:id="@+id/final_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="score"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+
+        </LinearLayout>
+
+
+        <!-- back to menu button -->
+        <Button
+            android:id="@+id/view_scoreboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:background="@color/inticolor"
+            android:text="View Scoreboard"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
