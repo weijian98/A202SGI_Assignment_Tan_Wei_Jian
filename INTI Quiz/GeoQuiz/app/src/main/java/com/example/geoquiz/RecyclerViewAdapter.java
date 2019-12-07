@@ -21,8 +21,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> usernames = new ArrayList<>();
-    private ArrayList<String> scores = new ArrayList<>();
+    //declaration of variables
+    private ArrayList<String> usernames ;
+    private ArrayList<String> scores ;
     private Context context;
 
     public RecyclerViewAdapter(Context context, ArrayList<String> usernames, ArrayList<String> scores) {
@@ -40,6 +41,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
+
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {

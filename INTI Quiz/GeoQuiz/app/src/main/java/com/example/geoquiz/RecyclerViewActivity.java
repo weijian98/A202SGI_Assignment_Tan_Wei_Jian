@@ -24,14 +24,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     private static final String TAG = "recyclerview";
 
-    User user;
+
     DatabaseReference ref;
 
     //variables
     private ArrayList<String> mUsernames = new ArrayList<>();
     private ArrayList<String> mScores = new ArrayList<>();
-    private String getName;
-    private String getScore;
     private Button backButton;
 
 
@@ -40,19 +38,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view);
-
-        //gets intent extras from previous activity
-        Intent intent = getIntent();
-
-        //checks if there is intents passed
-        if (intent.hasExtra("score")) {
-            getScore = getIntent().getExtras().getString("score");
-            getName = getIntent().getExtras().getString("name");
-        }
-
-        Log.d(TAG, "onCreate: started");
-
-        inputDB();
 
         // gets scoreboard data from database
         ref = FirebaseDatabase.getInstance().getReference();
@@ -98,20 +83,6 @@ public class RecyclerViewActivity extends AppCompatActivity {
                 finishAffinity();
             }
         });
-
-
-
-    }
-
-
-
-    private void inputDB() {
-
-        Log.d(TAG, "inputDB: is called");
-        user = new User();
-
-        user.setScore(getScore);
-        user.setUsername(getName);
 
     }
 

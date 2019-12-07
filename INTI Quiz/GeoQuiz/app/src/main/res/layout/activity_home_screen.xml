@@ -29,8 +29,8 @@
             android:gravity="center"
             android:orientation="vertical"
             android:weightSum="4"
-
             >
+
             <!-- Welcome label-->
             <TextView
                 android:layout_width="wrap_content"
@@ -94,6 +94,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
+            <!-- View scoreboard button -->
             <Button
                 android:id="@+id/main_view_scoreboard"
                 android:layout_width="300dp"

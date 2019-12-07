@@ -7,8 +7,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.os.PersistableBundle;
-import android.util.Log;
 import android.widget.Button;
 
 import android.view.View;
@@ -26,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private Button mFalseButton;
     private TextView mQuestionTextView;
     private TextView mScore;
-    private TextView mUsername;
     public String username;
 
-
+    private int mCurrentIndex = 0;
+    private boolean mIsCheater;
 
     //sets the question for quiz
     private Question[] mQuestionBank = new Question[]{
@@ -48,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     };
 
-    private int mCurrentIndex = 0;
-    private boolean mIsCheater;
+
 
 
     //updates the question
@@ -92,8 +89,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
-
+        mQuestionTextView =  findViewById(R.id.question_text_view);
         //gets the intent extras from previous activity
         Intent getName = getIntent();
         Bundle b = getName.getExtras();
@@ -102,9 +98,7 @@ public class MainActivity extends AppCompatActivity {
         if(b!=null)
         {
             username = getIntent().getExtras().getString("username");
-
         }
-
 
         mTrueButton = (Button) findViewById(R.id.true_button);
 
@@ -119,14 +113,12 @@ public class MainActivity extends AppCompatActivity {
 
                 //if all questions are asked, call the end screen
                 if (mCurrentIndex == mQuestionBank.length ){
-
                     openEnd();
                 }
                 //proceeds to ask next question
                 else {
                     updateQuestion();
                 }
-
             }
         });
 
@@ -152,7 +144,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         mCheatButton = (Button)findViewById(R.id.cheat_button);
         mCheatButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -171,7 +162,6 @@ public class MainActivity extends AppCompatActivity {
         mQuestionBank[0].getTextResId();
 
         updateQuestion();
-
     }
 
     @Override
@@ -194,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    //calls the end screen
+    //calls the score summary screen
     public void openEnd(){
         Intent intent = new Intent(this,end_activity.class);
         intent.putExtra("username",username);

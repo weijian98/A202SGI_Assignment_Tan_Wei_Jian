@@ -57,8 +57,8 @@
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
-
                 />
+
             <!-- final score label -->
             <TextView
                 android:id="@+id/final_score"
@@ -73,7 +73,7 @@
         </LinearLayout>
 
 
-        <!-- back to menu button -->
+        <!-- view scoreboard button -->
         <Button
             android:id="@+id/view_scoreboard"
             android:layout_width="match_parent"
@@ -83,6 +83,15 @@
             android:background="@color/inticolor"
             android:text="View Scoreboard"
             android:textColor="@color/white" />
+
+        <!-- back to menu button -->
+        <Button
+            android:id="@+id/go_back_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to menu"
+            android:textColor="@color/white"
+            android:background="@color/black"/>
 
 
     </LinearLayout>

@@ -29,4 +29,6 @@
     <string name="score_label">Your score is:</string>
     <string name="welcome">Welcome to IICP Common Knowledge Quiz</string>
     <string name="main_score_label">Your score is:</string>
+    <string name="scoreboard">Scoreboard</string>
+    <string name="backtomenu">Back to menu</string>
 </resources>

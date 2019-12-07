@@ -16,7 +16,7 @@
         android:padding="24dp"
         android:text="@string/warning_text"
         android:textColor="@color/bloodred"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:textStyle="bold" />
 
     <!-- Answer label-->

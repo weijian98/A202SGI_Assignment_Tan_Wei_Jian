@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,10 +12,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class end_activity extends AppCompatActivity {
-    private static final String TAG = "end_activity";
     private TextView mScore;
     private TextView mUsername;
     public Button viewScoreboard;
+    public Button mBackToMenu;
     User user;
     DatabaseReference ref;
     String getName;
@@ -40,6 +39,7 @@ public class end_activity extends AppCompatActivity {
         if (getName != null && !getName.isEmpty() && !getName.equals("null")) {
             mUsername.setText(getName);
         }
+
         //if no username is entered, the username label will show unknown player
         else{
             mUsername.setText("Unknown Player");
@@ -52,6 +52,24 @@ public class end_activity extends AppCompatActivity {
 
         user = new User();
 
+        //onclicklistener for back button
+        mBackToMenu = findViewById(R.id.go_back_menu);
+        mBackToMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                user.setUsername(getName);
+                user.setScore(getScore);
+
+                //pushes the data to firebase
+                ref.push().setValue(user);
+                Intent intent = new Intent(end_activity.this, home_screen.class);
+                startActivity(intent);
+                finishAffinity();
+            }
+        });
+
+
+
         //sets onclicklistener for back to menu button
         viewScoreboard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,13 +77,10 @@ public class end_activity extends AppCompatActivity {
                 user.setUsername(getName);
                 user.setScore(getScore);
 
-
                 //pushes the data to firebase
                 ref.push().setValue(user);
 
                 Intent intent = new Intent(end_activity.this,RecyclerViewActivity.class);
-                intent.putExtra("name",getName);
-                intent.putExtra("score",getScore);
                 startActivity(intent);
 
             }

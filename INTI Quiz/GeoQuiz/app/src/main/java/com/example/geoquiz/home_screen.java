@@ -20,7 +20,7 @@ public class home_screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        startButton = (Button) findViewById(R.id.start_button);
+        startButton =  findViewById(R.id.start_button);
         //sets onclicklistener for start button
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +29,7 @@ public class home_screen extends AppCompatActivity {
             }
         });
 
-        viewScoreboard = (Button) findViewById(R.id.main_view_scoreboard);
+        viewScoreboard =  findViewById(R.id.main_view_scoreboard);
         //Sets onclicklistener for scoreboard button
         viewScoreboard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +44,7 @@ public class home_screen extends AppCompatActivity {
     //function to call another activity
     public void startQuiz(){
         Intent intent = new Intent(this,MainActivity.class);
-        username = (EditText) findViewById(R.id.name_input);
+        username =  findViewById(R.id.name_input);
         String usrname = username.getText().toString();
         intent.putExtra("username",usrname);
         startActivity(intent);
